@@ -6,11 +6,9 @@ Fixture files in tests/fixtures/ contain obviously fake secrets (see comments
 in each file). No real credentials appear anywhere in this repo.
 """
 
-import os
 from pathlib import Path
-import pytest
 
-from zak_guard.scanner import scan_file, scan_directory, _scan_diff_text, Finding
+from zak_guard.scanner import scan_file, scan_directory, _scan_diff_text
 
 
 FIXTURES = Path(__file__).parent / "fixtures"

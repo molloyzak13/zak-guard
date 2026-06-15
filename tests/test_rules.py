@@ -6,8 +6,6 @@ namespace and have been constructed to match detector patterns without being
 real credentials.
 """
 
-import math
-import pytest
 from zak_guard.rules import shannon_entropy, redact, RULES, check_entropy
 
 
@@ -74,7 +72,7 @@ class TestRulePatterns:
             "AWS_SECRET_ACCESS_KEY=FakeSecretKeyABCDEFGHIJKLMNOPQRSTUVWXYZ12"
         )
         # short value should match pattern but will fail entropy gate
-        m = rule.pattern.search("AWS_SECRET_ACCESS_KEY=short")
+        rule.pattern.search("AWS_SECRET_ACCESS_KEY=short")
         # short values may or may not match the regex — that's fine
 
     def test_github_pat_classic(self):
