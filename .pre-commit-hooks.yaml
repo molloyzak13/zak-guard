@@ -1,0 +1,9 @@
+- id: zak-guard
+  name: zak-guard secret scanner
+  description: Scans staged changes for AWS keys, GitHub PATs, Stripe tokens, private keys, and more. Exits non-zero on any finding.
+  entry: zak-guard
+  args: [--staged]
+  language: python
+  types: [text]
+  pass_filenames: false
+  stages: [pre-commit]

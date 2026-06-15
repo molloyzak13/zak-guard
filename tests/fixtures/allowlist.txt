@@ -1,0 +1,8 @@
+# zak-guard allowlist — strings matched here are ignored during scans.
+# Use this for known-fake test fixtures, example values in docs, etc.
+# One entry per line. Lines starting with # are comments.
+# Matching is substring: if this string appears anywhere in the detected value, it's suppressed.
+
+# These entries suppress our own test fixtures so we can test the allowlist feature
+AKIAEXAMPLEFAKEKEY01
+ghp_FakeTokenExampleABCDEFGHIJKLMNOP1234
